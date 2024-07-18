@@ -1,5 +1,7 @@
-﻿using Assignment_4.interface_Ex2;
+﻿
+using Assignment_4.interface_Ex2;
 using Assignment_4.Interface_Ex3;
+using System;
 
 namespace Assignment_4
 {
@@ -29,6 +31,18 @@ namespace Assignment_4
             //   airplane.forword();
             IMovable movable = new Airplane();
             movable.forword();
+            #endregion
+            #region deep copy Vs Shallo copy 
+            int[] arr1 = [1, 3, 5];
+            int[] arr2 = { 4, 6, 7 };
+            //Shallo copy 
+            //Console.WriteLine(arr1.GetHashCode());
+            //Console.WriteLine(arr2.GetHashCode());
+            //arr1 = arr2;
+
+            // deep copy
+            arr2 = (int[])arr1.Clone();
+
             #endregion
         }
     }
