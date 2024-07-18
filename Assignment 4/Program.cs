@@ -1,4 +1,5 @@
 ﻿using Assignment_4.interface_Ex2;
+using Assignment_4.Interface_Ex3;
 
 namespace Assignment_4
 {
@@ -18,8 +19,17 @@ namespace Assignment_4
         }
         static void Main(string[] args)
         {
-           seriesByTwo series = new seriesByTwo();
-            print10NumberFromSeries(series);
+            #region Part1 interface
+            //  seriesByTwo series = new seriesByTwo();
+            // print10NumberFromSeries(series);
+            #endregion
+
+            #region Ex#_interface
+            Airplane airplane = new Airplane();
+            //   airplane.forword();
+            IMovable movable = new Airplane();
+            movable.forword();
+            #endregion
         }
     }
 }
